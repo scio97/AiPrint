@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="it.unimib.aiprint.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="it.unimib.aiprint.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/aiPrintGeneratorFragment"
+        android:name="it.unimib.aiprint.ui.main.menu.AiPrintGeneratorFragment"
+        android:label="fragment_ai_print_generator"
+        tools:layout="@layout/fragment_ai_print_generator" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="it.unimib.aiprint.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
