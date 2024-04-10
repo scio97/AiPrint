@@ -197,6 +197,50 @@ Il deisgn dell'applicazione è stato sviluppato seguendo le linee guida generali
 
 __WelcomeFragment__: Pagina di benvenuto ai nuovi utenti, offre la possibilità di fare il login o la registrazione (la navigazione è gestita tramite navigation graph)
 
+<div align=center>
+ <img width="200" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/436f0917-619a-4d05-8d88-740d41d79783">
+</div>
+
+__LoginFragment__: Interfaccia per effettuare la Login, se l’utente è già registrato, altrimenti apparirà un messaggio di errore specifico al contesto.
+I campi presenti sono due EditText rispettivamente per l’inserimento dell’email e della password.
+Al click del bottone “Login” verrà interrogato Firebase per verificare l’autenticità delle credenziali e, in caso di successo, ritornare il tokenId dell’utente.
+
+<div align=center>
+ <img width="200" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/33bf7193-6e9a-402f-9d7f-d2b237399960">
+</div>
+
+__RegistrationFragment__: Interfaccia per effettuare la registrazione dell’utente nel se non è già registrato,
+in caso contrario apparirà un messaggio di errore specifico al contesto. I campi presenti sono quattro EditText rispettivamente per l’inserimento dello username,
+dell’email e della password e un datepicker per la data di nascita. Inoltre, è disponibile la registrazione con il proprio account Google.
+Al click del bottone “Registrati” verranno validate le email (che sia nel formato corretto) e la password
+(lunghezza minima, obbligo di caratteri speciali e lettere maiuscole). Se tutto conforme l’utente verrà inserito in firebase.
+
+<div align=center>
+ <img width="200" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/974a6130-af07-4be7-acb1-75db62a30b75">
+</div>
+
+__HomeFragment__: Nell’interfaccia è presente una RecycleView che contiene gli ultimi post generati dagli utenti. In particolare per ogni post l’utente può:
+
+* Mettere like, quindi salvarlo nei preferiti
+* Cliccare sul carrello per visualizzare lo shop relativo al post ed eventualmente comprare l’articolo
+* Salvarlo in locale per poterlo vedere anche offline
+
+<div align=center>
+ <img width="200" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/35a31e76-9af3-45c8-94d2-4883e3890643">
+</div>
+
+__FavouritePostFragment__: Questa sezione ha il compito di mostrare i post a cui l’utente ha messo like e quelli salvati in memoria locale.
+Nella sezione alta della view è possibile scegliere quali delle due sezioni visualizzare. Nel caso si volessero visualizzare i post salvati,
+questi verranno letti dal database in locale. I post preferiti invece verranno letti direttamente da Firebase
+
+<div align=center>
+ <img width="200" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/3f76ca07-1477-4fae-8c7d-1df28d8ec4e9">
+</div>
+
+__GenerateFragment__: 
+
+
+
 
 
 
