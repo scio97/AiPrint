@@ -159,17 +159,43 @@ Il database principale per salvare i dati di AiPrint è Firebase.
 I dati vengono archiviati come JSON e sincronizzati in tempo reale con ogni client connesso. In particolare, vengono utilizzati due servizi offerti da Firebase:
 
 * Firebase __Authentication__, necessario per gestire il login e registrazione dell’utente tramite le credenziali di accesso quali email e password.
-* Firebase RealTime DB, nel quale abbiamo strutturato tre collection
-○ User: Contiene le informazioni degli utenti come email e nome utente.
-○ Post: Salva le informazioni dei post creati dagli utenti.
-○ Like: Contiene le interazioni (‘mi piace’) tra utente e post. Nella collection
-sono inseriti tutti i mi piace che un utente ha dato ad un post in una relazione
-N-M
+* Firebase __RealTime DB__, nel quale sono strutturate tre collection:
+  - User: Contiene le informazioni degli utenti come email e nome utente.
+  - Post: Salva le informazioni dei post creati dagli utenti.
+  - Like: Contiene le interazioni (‘mi piace’) tra utente e post. Nella collection sono inseriti tutti i mi piace che un utente ha dato ad un post in una relazione N-M
 
+### SALVATAGGIO SUL DATABASE LOCALE: ROOM
 
+I post alla quale l'utente mette like vengono salvati nella memoria del proprio dispositivo attraverso il database Room (parte della suite Android Jetpack)
 
+L’applicazione mette a disposizione dell’utente la possibilità di salvare i post per poi consultarli in seguito, anche in modalità offline.
+In particolare per sviluppare la funzionalità le classi principali utilizzate sono:
 
+* __PostDao__: è un'interfaccia che racchiude i metodi e le relative query per l’accesso ai dati del database locale
+  (ad esempio il metodo getAllPost() viene preceduto dal decorator Query con “SELECT * FROM post ORDER BY date DESC”)
+* __PostRoomDatabase__ classe astratta che rappresenta il database Room con entità Post, contiene i riferimenti a PostDao, l’istanza, il numero di thread,
+  l’ExecutorService e il metodo pubblico getDatabase con il quale è possibile ricevere l’istanza del database (se l’istanza è nulla viene creata con databaseBuilder)
 
+Le classi citate sono utilizzate dal Post Local DataSource, che si inserisce nel contesto più ampio dell’architettura viewmodel descritta in precedenza.
+
+### LOGIN E REGISTRAZIONE
+
+La parte relativa agli account è gestita tramite Firebase Authentication (in alternativa è possibile usare un account Google per accedere)
+
+Attualmente la registrazione ad AiPrint è obbligatoria, pertanto la schermata principale al primo avvio dell’applicazione è la registrazione o la login (Welcome Activity).
+
+Una volta che l’utente effettua la login, i suoi dati vengono crittografati e salvati in locale con lo scopo di evitare l’autenticazione ad ogni avvio dell’app.
+A questo punto viene lanciata la MainActivity.
+
+<div align=center>
+ <img width="900" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/1c602596-b5f9-4686-8bfe-40d0800e0294">
+</div>
+
+## DESIGN
+
+Il deisgn dell'applicazione è stato sviluppato seguendo le linee guida generali del material design 3 con qualche aggiunta e personalizzazione.
+
+__WelcomeFragment__: Pagina di benvenuto ai nuovi utenti, offre la possibilità di fare il login o la registrazione (la navigazione è gestita tramite navigation graph)
 
 
 
