@@ -237,12 +237,25 @@ questi verranno letti dal database in locale. I post preferiti invece verranno l
  <img width="200" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/3f76ca07-1477-4fae-8c7d-1df28d8ec4e9">
 </div>
 
-__GenerateFragment__: 
+__GenerateFragment__: Permette all'utente di creare un post con la t-shirt personalizzata, il flusso di azioni per la creazione sono:
 
+* Descrivere l'immagine desiderata nell'apposita EditText
+* Premere il pulsante di fianco l'EditText per confermare
+* L'applicazione genera l'immagine e scorrendo verso sinistra è possibile vederla applicata ad una maglietta
+* Ora è possibile, attraverso appositi bottoni sottostanti, acquistare la maglietta nello shop (vedere sezione che segue)
+  o condividere con la community il post raffigurante l'articolo appena generato
 
+<div align=center>
+ <img width="600" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/8efdabd9-f61d-4382-b031-f0468d70be1e">
+</div>
 
+### LA FEATURE BUY
 
+Cliccando il pulsante "Buy" nella sezione Generale, l'utente verrà reindirizzato alla pagina dello shop dove potrà scegliere la taglia e anche diversi capi come magliette, felpe o pantaloni da poter acquistare
 
+<div align=center>
+ <img width="550" alt="Senza titolo" src="https://github.com/scio97/AiPrint/assets/56976553/52364271-4d70-4737-a165-5a1bdb9fe818">
+</div>
 
 
 
