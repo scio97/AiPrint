@@ -4,6 +4,12 @@ Il progetto consiste in una Android App in grado di creare T-shirt personalizzat
 condividere le creazioni in un social network creato appositamente, acquistare la le T-shirt personalizzare,
 gestire il proprio account e visualizzare e interagire con le creazioni di altri utenti.
 
+### TECNOLOGIE IMPLEMENTATE
+
+Il progetto è stato sviluppato utilizzando le seguenti tecnologie: Java, SQL, Firebase, Room, API (DeepImage, Teemill), 
+
+Inoltre segue i pattern architetturali: MVC, Service, Singleton, Repository, Adapter
+
 ## SERVIZI ESTERNI UTILIZZATI
 
 ### DEEPIMAGE
