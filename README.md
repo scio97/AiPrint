@@ -1,7 +1,7 @@
 # AiPrint
  
 Il progetto consiste in una Android App in grado di creare T-shirt personalizzate attraverso l'uso dell'AI,
-condividere le creazioni in un social network creato appositamente, acquistare la le T-shirt personalizzare,
+condividere le creazioni in un social network creato appositamente, acquistare le T-shirt personalizzare,
 gestire il proprio account e visualizzare e interagire con le creazioni di altri utenti.
 
 ### TECNOLOGIE IMPLEMENTATE
